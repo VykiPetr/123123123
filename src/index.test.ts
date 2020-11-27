@@ -41,8 +41,16 @@ describe('Number to English converter test suite', () => {
         expect(convertNumberToEnglishText(1234)).toBe('one thousand two hundred thirty four');
     });
 
+    it('should print correctly for 9999', () => {
+        expect(convertNumberToEnglishText(9999)).toBe('nine thousand nine hundred ninety nine');
+    });
+
     it('should print correctly for 10000', () => {
         expect(convertNumberToEnglishText(10000)).toBe('ten thousand');
+    });
+
+    it('should print correctly for 11000', () => {
+        expect(convertNumberToEnglishText(11000)).toBe('eleven thousand');
     });
 
     it('should print correctly for 60019', () => {
@@ -51,6 +59,10 @@ describe('Number to English converter test suite', () => {
 
     it('should print correctly for 67567', () => {
         expect(convertNumberToEnglishText(67567)).toBe('sixty seven thousand five hundred sixty seven');
+    });
+
+    it('should print correctly for -12919', () => {
+        expect(convertNumberToEnglishText(-12919)).toBe('negative twelve thousand nine hundred nineteen');
     });
 
     it('should print correctly for 99999', () => {
